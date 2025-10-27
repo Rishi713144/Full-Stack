@@ -1,0 +1,13 @@
+ "name"   : "Rishi",
+  "sku"    : "54321",
+  "price"  : 199.95,
+  "shipTo" : { "name" : "Bob Brown",
+               "address" : "456 Oak Lane",
+               "city" : "Pretendville",
+               "state" : "HI",
+               "zip"   : "98999" },
+  "billTo" : { "name" : "Rishi",
+               "address" : "456 Oak Lane",
+               "city" : "Pretendville",
+               "state" : "HI",
+               "zip"   : "98999" }
