@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
-mongoose.connect("mongodb+srv://konarsoumitra05_db_user:81396261@cluster0.vzhlqlx.mongodb.net/user_new")
+mongoose.connect("mongodb+srv:user_new")
 
 
 
@@ -39,5 +39,6 @@ app.post("/signup", async function (req, res) {
         "msg": "User created successfully"
     });
 });
+
 
 app.listen(3000)
