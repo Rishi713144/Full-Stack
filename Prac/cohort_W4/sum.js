@@ -1,25 +1,51 @@
+<html>
+<script>
+    function debouncePopulateDiv() {
+        const timeout = setTimeout(function()  {
+            populateDiv();
+        }, 100);
+        clocktimeout(timeout);
+    }
+    function populateDiv() {
+        const a = document.getElementById('firstNumber').value;
+        const b = document.getElementById('secondNumber').value;
+        // fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b)
+        //     .then(function (response) {
+        //         response.text()
+        //             .then(function (ans) {
+        //                 document.getElementById("finalSum").innerHTML = ans;
+        //             });
+        //     });
+    }
 
-const express = require("express");
+    // async function populateDiv2() {
+    //     const a = document.getElementById("firstNumber").value;
+    //     const b = document.getElementById("secondNumber").value;
+    //     const response = await fetch("https://sum-server.100xdevs.com/sum?a=" + a + "&b=" + b);
+    //     const ans = await response.text();
+    //     document.getElementById("finalSum").innerHTML = ans;
 
-const app=express();
 
-app.get("/sum",(req,res =>{
-    const a = parseInt(req.query.a);
-    const b = parseInt(req.query.b);
-    const sum = a + b;
-    res.send (sum.toString());
-}));
 
-app.get("/interest",(req, res)=>{
-    const principal = parseFloat (req.query.principal);
-    const rate = parseFloat (req.query.rate);
-    const time = parseFloat (req.query.time);
-    const interest = (principal * rate * time) / 100;
-    const totalAmount = principal + interest;
-    res.send({
-        totalAmount: totalAmount,
-        interest: interest,
-    });
-})
 
-app.listen(8080)
+        // const element = document.getElementById("finalSum");
+        // console.log(element);
+        // element.innerHTML = parseInt(a) + parseInt(b);
+    // }
+
+
+</script>
+
+<body>
+    <input onInput="debouncePopulateDiv()" id="firstNumber" 
+        type="text"  placeholder="Enter First Number"><br></br>
+        <input onInput="debouncePopulateDiv()" id="secondNumber" 
+        type="text"  placeholder="Enter Second Number"><br></br>
+
+    <!-- <input id="firstNumber" type="text" placeholder="Enter First Number"><br></br>
+    <input id="secondNumber" type="text" placeholder="Enter Second Number"><br></br> -->
+    <button onclick="populateDiv()">Calculate Sum</button><br></br>
+    <div id="finalSum"></div>
+</body>
+
+</html>
