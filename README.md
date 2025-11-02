@@ -1,6 +1,3 @@
-# 1 to 100 — Advanced Full-Stack & DevOps Roadmap
-
----
 
 ## **Advanced Backend & System Design**
 
