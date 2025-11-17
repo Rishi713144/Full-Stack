@@ -1,0 +1,18 @@
+{
+  "name": "w10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/pg": "^8.15.6",
+    "pg": "^8.16.3"
+  }
+}
