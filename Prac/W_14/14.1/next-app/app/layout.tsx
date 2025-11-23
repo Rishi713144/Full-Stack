@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* <head><title>Deepika</title></head> */}
+     
       <body className={inter.className}>
         <div className="p-4 border-b">
           Medium
