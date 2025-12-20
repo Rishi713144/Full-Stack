@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "tsc -b && node dist/index1.js",
+    "start2": "tsc -b && node dist/index2.js",
+    "start3": "tsc -b && node dist/index3.js"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
+  }
+}
